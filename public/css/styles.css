@@ -1,4 +1,16 @@
 body {
 
+  font-family: 'Hind Siliguri', sans-serif;
+
+}
+
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+
   
 }
