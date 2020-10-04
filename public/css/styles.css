@@ -13,6 +13,7 @@ padding: 3% 15%;
 h1 {
   font-size: 3rem;
   line-height: 1.5;
+  color:rgb(155, 219, 176);
 }
 
 /* Nav Bar */
@@ -40,4 +41,35 @@ p{
 
 .title-img {
   width: 70%;
+}
+
+/* Recientes */
+#recientes {
+  padding : 60px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.blog-img{
+
+width: 100%;
+padding-bottom: 20px;
+}
+
+.blog-column{
+  padding:3% 5%;
+  
+}
+
+h3{
+text-align: center;
+font-size: 20px;
+}
+
+.cardp{
+  font-size: 14px;
+  color: rgb(182, 181, 181);
 }
