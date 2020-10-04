@@ -5,7 +5,7 @@ body {
 }
 
 #title {
-  background-color: #f7fffa;
+  background-color: #F9FFFC;
 }
 .container-fluid {
 padding: 3% 15%;
@@ -13,7 +13,7 @@ padding: 3% 15%;
 h1 {
   font-size: 3rem;
   line-height: 1.5;
-  color:rgb(155, 219, 176);
+  color: #86EDA7
 }
 
 /* Nav Bar */
@@ -35,6 +35,7 @@ h1 {
 
 p{
   padding: 4% 0;
+
 }
 
 /*Title Image */
@@ -51,6 +52,7 @@ p{
 h2 {
   font-weight: bold;
   font-size: 2rem;
+  text-align: justify;
 }
 
 .blog-img{
@@ -72,4 +74,29 @@ font-size: 20px;
 .cardp{
   font-size: 14px;
   color: rgb(182, 181, 181);
+}
+
+.buscar{
+  color: #86EDA7;
+  padding: 20px O;
+}
+/* Footer */
+
+#footer{
+  background-color: #264333;
+  color: white;
+}
+
+.socmed{
+  font-size: 30px;
+  padding-right: 20px;
+}
+
+.footer-item{
+  list-style-type: none;
+  display: flex;
+}
+
+.logo-blanco{
+  text-align: right;
 }
