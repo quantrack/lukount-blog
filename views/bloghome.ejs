@@ -2,7 +2,9 @@
 
 <!-- Title -->
 <div class = "row" >
+    
     <div class = "col-md-6">
+        
 <h1>Sed ut perspiciatis unde omnis iste natus error sit.</h1>
 <a class="leer" href="/post"><p style="color:rgb(68, 117, 223)">Leer más   <img src="images/arrow.svg" alt="arrow"></p></a>
 
@@ -21,20 +23,22 @@
 <h2>Recientes</h2>
 <div class="row">
 
-
+    <% posts.forEach(function(post){ %>
 <div class="blog-column col-md-4">
     <div class="card-content">
             <img class = "blog-img"src="images/nuestra_mision.svg" alt="blog_img">
         <div class="card-desc">
             
-            <a href="/post"><h3> </h3></a>
-            <p class="cardp"></p>
+            <a href="/post"><h3><%=post.title%></h3></a>
+
+            <p class="cardp"><%= post.content.substring(0,100)+"..."%></p>
+            
         </div>
     </div>
 </div>
+<%})%>
 
-
-<div class="blog-column col-md-4">
+<!-- <div class="blog-column col-md-4">
     <div class="card-content">
         <div class="card-img">
             <img class = "blog-img" src="images/nuestra_mision.svg" alt="blog_img">
@@ -58,7 +62,7 @@
             <p class="cardp">Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Sed ut perspiciatis unde omnis iste natus error sit.</p>
         </div>
     </div>
-</div>
+</div> -->
 
 
 

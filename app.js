@@ -31,7 +31,7 @@ app.post("/compose", function(req,res){
 
   const post = {
     title: req.body.postTitle,
-    content: req.body.postTitle
+    content: req.body.postContent,
   };
 
 posts.push(post);
@@ -46,7 +46,9 @@ res.redirect("/")
 
 
 
-
+app.get("/post/:postName", function(req,res){
+  console.log(req.params.postName);
+})
 
 //------------
 app.listen(3000, function(){

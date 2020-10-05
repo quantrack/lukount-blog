@@ -102,16 +102,27 @@ color : #264333;
 #footer{
   background-color: #264333;
   color: white;
+  height: 30%;
+}
+.copyright{
+  margin: auto;
 }
 
+.footersocmed{
+  margin: auto;
+  padding;
+}
 .socmed{
   font-size: 30px;
   padding-right: 20px;
+  
 }
 
 .footer-item{
   list-style-type: none;
-  display: flex;
+margin: auto;
+position: absolute;
+bottom: 1;
 }
 
 .logo-blanco{
