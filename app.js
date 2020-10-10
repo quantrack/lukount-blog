@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require ("express");
 const app = express();
 const ejs = require ("ejs");
@@ -19,7 +20,7 @@ const compose = require ("./routes/compose");
 app.use("/compose", compose);
 
 
-//------------------
+
 // -------------Database----------
 mongoose.connect("mongodb://localhost:27017/lukountblogDB", {useNewUrlParser: true,useUnifiedTopology:true});
 const Post = require("./models/post"); 
