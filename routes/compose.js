@@ -2,15 +2,12 @@ const express = require("express");
 const router = express.Router();
 const Post = require("../models/post"); 
 
-
-
-
-
 router
 .route("/")
 .get(function(req,res){
   res.render("compose")
 })
+
 .post(function(req,res){
 
   const post = new Post({
@@ -24,7 +21,7 @@ router
       if (!err) {
         res.redirect("/");
       }
-    });
+    })
 
 });
 
