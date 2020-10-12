@@ -4,10 +4,6 @@ const Post = require("../models/post");
 
 router
 .route("/")
-.get(function(req,res){
-  res.render("compose")
-})
-
 .post(function(req,res){
 
   const post = new Post({
