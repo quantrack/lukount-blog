@@ -46,7 +46,7 @@ app.route("/post/:postId")
   
   });
 
-
+// Authentication routes
   app
   .route("/register")
   .get(function(req,res){

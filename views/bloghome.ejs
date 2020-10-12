@@ -30,7 +30,7 @@
             
             <a href="/post/<%=post._id%>"><h3><%= post.title %> </h3></a>
 
-            <p class="cardp"><%= post.content.substring(0, 100) + " ..." %> </p>
+            <p class="cardp"><%=post.content.substring(0, 100) + " ..."%> </p>
             
         </div>
     </div>
@@ -71,5 +71,6 @@
 
 
 
-    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <%- include ("partials/footer") -%>
