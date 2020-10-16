@@ -19,6 +19,9 @@ app.use("/compose", compose);
 const bloghome = require ("./routes/bloghome")
 app.use("/", bloghome);
 
+const blogpost = require ("./routes/blogpost")
+app.use("/post", blogpost);
+
 
 
 // -------------Database----------
@@ -27,24 +30,6 @@ const Post = require("./models/post");
 const User = require("./models/user");
 
 // ---------------------------------
-
-
-
-app.route("/post/:postId")
-.get(function(req, res){
-
-  const requestedPostId = req.params.postId;
-  
-    Post.findOne({_id: requestedPostId}, function(err, post){
-
-      res.render("blogpost", {
-        title: post.title,
-        content: post.content,
-        createdAt: post.createdAt,
-      });
-    });
-  
-  });
 
 
   app

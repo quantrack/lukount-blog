@@ -9,15 +9,40 @@
 <label for="">Title</label>
 <input class = "form-control" type="text" name="postTitle">
 
+<label for="">Subtitle (150 characters max.)</label>
+<input class = "form-control" type="text" name="postSubtitle" maxlength="150">
+
 <label>Post</label>
-<textarea class="form-control" name="postContent" id="" cols="30" rows="5"></textarea>
+<textarea name="postContent" id="editor">
+    This is some sample content.
+</textarea>
+
+<label for="">Writer</label>
+<input class = "form-control" type="text" name="postWriter">
 
 <label for="">Image</label>
-<input class="" type="file" accept="image/*">
+<input class="form-control-file" type="file" accept="image/*">
+
 
 </div>
 <button class ="btn btn-dark" type="submit">Publish</button>
 
 </form>
 
+
+<script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+    });
+  </script>
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
