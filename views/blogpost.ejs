@@ -1,6 +1,6 @@
 <%- include ("partials/header") -%>
 
-<h1 class= "postheader"><%=title%> </h1>
+<img class = "title-img" src="images/blog_img.svg" alt="blog_img">
 
 <section id="blogPost">
 <div class="container.fluid row">
@@ -9,10 +9,10 @@
     <div class="metainfo">
 
     <h3>Publicado</h3>
-<p> <%=createdAt%></p>
+<p class = "pgen"> </p>
 <hr>
 <h3>Escritor</h3>
-<p>Luisa López</p>
+<p class = "pgen"><%=writer%> </p>
 <hr>
 <h3>Compartir</h3>
 
@@ -24,32 +24,20 @@
 </div>
 </div>
 
-
-
-
 <div class ="col-md-10">
-<img src="https://decorblueprint.com/wp-content/uploads/2019/08/interior-design-blog-post-ideas.jpg" class="blogPostImage" alt="post_image">
+    
+    <!-- Problem : why image not showing up? -->
 
-<p class="postContentp"><%= content %> </p>
+<!-- <img src= " " class="blogPostImage" alt="post_image"> -->
 
+<h1 class= "postheader"> <%=title%> </h1>
+<p class="postContentp"><%- content %> </p>
 </div>
-
-
-
-
-
-
-
-
 </div>
-
-
 </section>
 
 
 </div>
 </section>
-
-
 
 <%- include ("partials/footer") -%>

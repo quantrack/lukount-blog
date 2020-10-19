@@ -9,7 +9,9 @@ const saltRounds = 10;
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
+
 app.use(express.static("public"));
+app.use(express.static('public/uploads'));
 
 // Routing
 const router = express.Router();
@@ -19,6 +21,8 @@ app.use("/compose", compose);
 const bloghome = require ("./routes/bloghome")
 app.use("/", bloghome);
 
+const blogpost = require ("./routes/blogpost")
+app.use("/post", blogpost);
 
 
 // -------------Database----------
@@ -29,24 +33,6 @@ const User = require("./models/user");
 // ---------------------------------
 
 
-
-app.route("/post/:postId")
-.get(function(req, res){
-
-  const requestedPostId = req.params.postId;
-  
-    Post.findOne({_id: requestedPostId}, function(err, post){
-
-      res.render("blogpost", {
-        title: post.title,
-        content: post.content,
-        createdAt: post.createdAt,
-      });
-    });
-  
-  });
-
-// Authentication routes
   app
   .route("/register")
   .get(function(req,res){
