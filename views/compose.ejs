@@ -3,7 +3,10 @@
 <h1>Compose</h1>
 
 
-<form action="/compose" method="post">
+<form action="/compose" enctype="multipart/form-data" method="post">
+
+<label for="">Image</label>
+<input name="myImage" class="form-control-file" type="file" accept="image/*">
 
 <div class="form-group">
 <label for="">Title</label>
@@ -19,9 +22,6 @@
 
 <label for="">Writer</label>
 <input class = "form-control" type="text" name="postWriter">
-
-<label for="">Image</label>
-<input class="form-control-file" type="file" accept="image/*">
 
 
 </div>
@@ -44,5 +44,4 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
 

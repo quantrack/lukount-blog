@@ -9,7 +9,9 @@ const saltRounds = 10;
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
+
 app.use(express.static("public"));
+app.use(express.static('public/uploads'));
 
 // Routing
 const router = express.Router();
@@ -21,7 +23,6 @@ app.use("/", bloghome);
 
 const blogpost = require ("./routes/blogpost")
 app.use("/post", blogpost);
-
 
 
 // -------------Database----------
