@@ -12,11 +12,11 @@ router
     Post.findOne({_id: requestedPostId}, function(err, post){
 
       res.render("blogpost", {
-        // image: post.image,
+        image: post.image,
         title: post.title,
         content: post.content,
         writer: post.writer,
-        
+    
       });
     });
   

@@ -69,6 +69,7 @@ h2 {
 
 width: 100%;
 padding-bottom: 20px;
+
 }
 
 .blog-column{
@@ -104,6 +105,10 @@ color : #264333;
   color: white;
   height: 30%;
 }
+
+.footersocmed > a{
+  text-decoration: none;
+}
 .copyright{
   margin: auto;
 }
@@ -114,7 +119,7 @@ color : #264333;
 .socmed{
   font-size: 30px;
   padding-right: 20px;
-  
+  text-decoration: none;
 }
 
 .footer-item{
@@ -139,10 +144,14 @@ bottom: 1;
 
 .blogPostImage{
   position: relative;
-width: 70%;
-margin-left: 20px;
+  width: 70%;
+  margin-left: auto;
   margin-right: auto;
   display: block;
+  /* border-radius: 8px; */
+  max-width: 100%;
+  height: auto;
+  padding : 2% 0;
 }
 
 .metainfo{

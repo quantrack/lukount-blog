@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.static('public/uploads'));
 
+
 // Routing
 const router = express.Router();
 const compose = require ("./routes/compose");

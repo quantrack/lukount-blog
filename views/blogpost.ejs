@@ -1,7 +1,5 @@
 <%- include ("partials/header") -%>
 
-<img class = "title-img" src="images/blog_img.svg" alt="blog_img">
-
 <section id="blogPost">
 <div class="container.fluid row">
 
@@ -9,7 +7,7 @@
     <div class="metainfo">
 
     <h3>Publicado</h3>
-<p class = "pgen"> </p>
+<p class = "pgen"></p>
 <hr>
 <h3>Escritor</h3>
 <p class = "pgen"><%=writer%> </p>
@@ -18,7 +16,7 @@
 
 <div class="socmed">
 <i class="socmed fab fa-facebook-f"></i>
-    <i class="socmed fab fa-instagram"></i>
+    <i class="socmed fab fa-linkedin-in"></i>
     <i class="socmed fab fa-twitter"></i>
 </div>
 </div>
@@ -26,11 +24,10 @@
 
 <div class ="col-md-10">
     
-    <!-- Problem : why image not showing up? -->
+    <h1 class= "postheader"> <%=title%> </h1>
+<img src= "/uploads/<%=image%>" class="blogPostImage" alt="post_image">
 
-<!-- <img src= " " class="blogPostImage" alt="post_image"> -->
 
-<h1 class= "postheader"> <%=title%> </h1>
 <p class="postContentp"><%- content %> </p>
 </div>
 </div>
