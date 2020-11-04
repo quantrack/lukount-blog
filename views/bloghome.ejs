@@ -4,7 +4,7 @@
     <div class = "col-md-6">
         
 <h1>Sed ut perspiciatis unde omnis iste natus error sit.</h1>
-<a class="leer" href="/post"><p style="color: #4475DF">Leer más   <img src="images/arrow.svg" alt="arrow"></p></a>
+<a class="leer" href="/post"><p style="color: #4475DF">Leer más   <img src="images/arrow.svg" alt="arrow" class=""></p></a>
 
 
     </div>
@@ -24,12 +24,12 @@
     <%  posts.forEach(function(post){ %>
 <div class="blog-column col-md-4">
     <div class="card-content">
-            <img class = "blog-img"src="<%=post.image%>" alt="blog_img">
+        <a href="/post/<%=post._id%>"><img class = "blog-img"src="<%=post.image%>" alt="blog_img"></a>
         <div class="card-desc">
             
             <a href="/post/<%=post._id%>"><h3><%= post.title %> </h3></a>
 
-            <p class="cardp"><%=post.subtitle%> </p> 
+            <a href="/post/<%=post._id%>"><p class="cardp"><%=post.subtitle%> </p></a>
             <!-- .substring(0, 100) + " ..."  -->
             
         </div>
@@ -46,6 +46,5 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <%- include ("partials/footer") -%>

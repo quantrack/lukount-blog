@@ -27,7 +27,7 @@ app.use("/post", blogpost);
 
 
 // -------------Database----------
-mongoose.connect("mongodb://localhost:27017/lukountblogDB", {useNewUrlParser: true,useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://admin-lukount:Lukount1@cluster0.uuo32.mongodb.net/lukountblogDB", {useNewUrlParser: true,useUnifiedTopology:true});
 const Post = require("./models/post"); 
 const User = require("./models/user");
 
