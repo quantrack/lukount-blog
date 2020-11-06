@@ -4,6 +4,10 @@ body {
 
 }
 
+.row a {
+  text-decoration: none;
+}
+
 #title {
   background-color: #F9FFFC;
 }
@@ -184,7 +188,9 @@ h3{
   margin-left: 20px;
   margin-right: auto; */
 }
-
+.content img{
+  max-width: 100%;
+}
 
 /* Footer */
 

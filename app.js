@@ -25,6 +25,9 @@ app.use("/", bloghome);
 const blogpost = require ("./routes/blogpost")
 app.use("/post", blogpost);
 
+const blogpostmain = require ("./routes/blogpostmain")
+app.use("/blogpostmain", blogpostmain);
+
 
 // -------------Database----------
 mongoose.connect("mongodb+srv://admin-lukount:Lukount1@cluster0.uuo32.mongodb.net/lukountblogDB", {useNewUrlParser: true,useUnifiedTopology:true});
