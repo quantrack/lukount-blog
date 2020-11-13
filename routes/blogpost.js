@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Post = require("../models/post"); 
+const Post = require("../models/post");
+const moment = require ("moment") ;
 
 
 router
@@ -8,7 +9,7 @@ router
 .get(function(req, res){
 
   const requestedPostId = req.params.postId;
-  
+
     Post.findOne({_id: requestedPostId}, function(err, post){
 
       res.render("blogpost", {
@@ -16,6 +17,7 @@ router
         title: post.title,
         content: post.content,
         writer: post.writer,
+        date: moment(post.createdAt).format('DD/MM/YYYY'),
     
       });
     });
