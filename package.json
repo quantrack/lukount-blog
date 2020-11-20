@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@editorjs/editorjs": "^2.19.0",
     "bcrypt": "^5.0.0",
     "ckeditor4": "^4.15.1",
     "dotenv": "^8.2.0",
