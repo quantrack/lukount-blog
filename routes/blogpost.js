@@ -13,6 +13,7 @@ router
     Post.findOne({_id: requestedPostId}, function(err, post){
 
       res.render("blogpost", {
+        postId: post._id,
         image: post.image,
         title: post.title,
         content: post.content,

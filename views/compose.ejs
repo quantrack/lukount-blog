@@ -16,9 +16,14 @@
 <input class = "form-control" type="text" name="postSubtitle" maxlength="150">
 
 <label>Post</label>
-<textarea name="postContent" id="editor">
-    This is some sample content.
+
+<textarea name="postContent" id="editor1">
+  This is some sample content.
 </textarea>
+
+<!-- <textarea name="postContent" id="editor">
+    This is some sample content.
+</textarea> -->
 
 <label>Writer</label>
 <input class = "form-control" type="text" name="postWriter">
@@ -27,22 +32,32 @@
 </div>
 <button class ="btn btn-dark" type="submit">Publish</button>
 
+
+
 </form>
 
-
 <script>
-    tinymce.init({
-      selector: 'textarea',
-      plugins: 'a11ychecker advcode casechange formatpainter image linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
-      toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
-      toolbar_mode: 'floating',
-      tinycomments_mode: 'embedded',
-      tinycomments_author: 'Author name',
-      image_dimensions: false
-    });
-  </script>
+
+
+CKEDITOR.replace( 'editor1',{
+    uiColor: '#14B8C4',
+  } );
+  
+  
+      // tinymce.init({
+      //   content_css : "public/css/styles.css",
+      //   selector: 'textarea',
+      //   plugins: '  image autolink lists media table ',
+      //   toolbar: ' addcomment showcomments casechange checklist code formatpainter  permanentpen table',
+      //   toolbar_mode: 'floating',
+      //   tinycomments_mode: 'embedded',
+      //   tinycomments_author: 'Author name',
+      //   image_dimensions: false
+      // });
+  
+  
+    </script>
 
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-

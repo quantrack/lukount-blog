@@ -8,6 +8,13 @@
 @font-face {
 
   font-family: tommy;
+  src: url(fonts/made_tommy_soft/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+  font-weight: 600;
+}
+
+@font-face {
+
+  font-family: tommy;
   src: url(fonts/made_tommy_soft/MADE\ Tommy\ Soft\ Bold\ PERSONAL\ USE.otf);
   font-weight: 700;
 }
@@ -15,15 +22,20 @@
 @font-face {
 
   font-family: tommy;
-  src: url(fonts/made_tommy_soft/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
-  font-weight: 600;
+  src: url(fonts/made_tommy_soft/MADE\ Tommy\ Soft\ Black\ PERSONAL\ USE.otf);
+  font-weight: 900;
 }
+
+
+
+
 
 
 
 body {
 
   font-family: 'tommy';
+  font-size: 1.1rem;
 
 }
 
@@ -50,6 +62,19 @@ h1 {
   color: #00F1A8
 }
 
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #6b706e;
+;}
+
+
+
 
 /* Nav Bar */
 
@@ -67,6 +92,12 @@ h1 {
   padding: 0 18px;
   color: #000;
 }
+
+.navbar a :hover{
+  color:#00F1A8
+}
+
+
 
 .nav-link {
   font-size: 1.2rem;
@@ -91,10 +122,7 @@ h1 {
   padding: 0px;
 }
 
-h2 {
-  font-weight: 700;
-  font-size: 2rem;
-}
+
 
 .blog-img {
 
@@ -114,7 +142,6 @@ h2 {
 
 .card-desc h3 {
   text-align: center;
-  font-size: 1.5rem;
   color: #264333;
 
 }
@@ -143,29 +170,28 @@ h2 {
   text-align: center;
   padding-bottom: 5%;
   font-weight: 700;
+}
 
+.postheaderdiv{
+  padding: 0 10% 3%;
+  
 }
 
 .metapic {
   display: flex;
   flex-direction: row-reverse;
-  left: 0;
+padding-bottom: 4%;
 
 }
 
 .blogPostImage {
-  /* position: relative; */
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 2%;
-  display: inline-flexbox;
   height: 100%;
   width: 100%;
-  max-height: 500px;
-  max-width: 700px;
+  max-height: 550px;
+  max-width: 800px;
   background-size: cover;
-    /* 
-  align-self: flex-end; */
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
@@ -180,11 +206,21 @@ h2 {
   display: inline-flexbox;
 }
 
+.metainfo .socmed{
+font-size: 25px;
+}
 
-
-.metainfo-hr {
+.metainfo hr {
   width: 100%;
   margin: auto;
+  /* background: #000; */
+}
+
+.metainfo h3 {
+  font-size: 1.1rem;
+  color: #00F1A8;
+  padding-top: 3%;
+  margin-bottom: 3%;
 }
 
 .compartir-socmed {
@@ -192,7 +228,13 @@ h2 {
   text-decoration: none;
   color: #264333;
   display: flex;
-  padding-bottom: 12%;
+  padding: 7% 0 14%;
+}
+.compartir-socmed a{
+  color: inherit;
+}
+.compartir-socmed a :hover{
+  color: #00F1A8;
 }
 
 .compartir-socmed-icon {
@@ -202,27 +244,48 @@ h2 {
 
 .compartir-mobile {
   display: none;
+
 }
 
-h3 {
-  font-size: 1.1rem;
-  color: #00F1A8;
-  padding-top: 3%;
+.compartir-mobile h3{
+color: #00F1A8;
+}
+
+.compartir-mobile i{
+  margin: 30px 50px 10px;
+}
+
+/* Content of the blogpost  */
+textarea {
+  display: block;
+}
+
+.content{
+text-align: justify;
 }
 
 
+.content h3{
+  font-weight: 600;
+  line-height: 1.4;
+  font-style: italic;
 
-/* .fullpost{
-  display: flex;
+}
+.content p{
+  line-height: 1.5;
+}
+
+/* .content ul{
+list-style-position: inside;
+margin: 20px;
 } */
 
-.postContentp {
-  padding-top: 3%;
+.content ol li{
+margin-bottom: 3% ;
+}
 
-  /* width: 70%;
-  text-align: justify;
-  margin-left: 20px;
-  margin-right: auto; */
+.content ul li{
+  margin-left: 30px;
 }
 
 .content img {
@@ -251,18 +314,20 @@ footer a {
   color: #FFF;
 }
 
-.copyright {
+footer p{
   margin: auto;
 }
 
 .footersocmed {
   margin: auto;
 }
+.footersocmed a:hover{
+  color: #00F1A8;
+}
 
 .socmed {
   font-size: 30px;
   padding-right: 20px;
-  text-decoration: none;
 }
 
 .footer-menu {
@@ -289,7 +354,7 @@ footer a {
 
 }
 
-ul {
+footer ul {
   margin: 0;
   padding: 0;
 }
@@ -298,6 +363,9 @@ ul {
   margin-top: 5%;
 }
 
+.hr-mobile{
+  display: none;
+}
 
 /* Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { 
@@ -312,14 +380,21 @@ ul {
 /* Small devices (landscape phones, less than 768px) */
 @media screen and (max-width : 1000px) {
 
+
+  
   .container-fluid {
     padding-right: 2%;
     padding-left: 2%;
   }
 
+  .nav-item {
+    padding: 0 45px 0;
+  }
+
   .metapic {
     text-align: center;
     flex-direction: column;
+    padding-bottom: 0;
   }
 
   .postheader {
@@ -335,10 +410,26 @@ ul {
   height: auto;
 }
 
-  .metainfo {
-    display: inline-flex;
+.content h2{
+  text-align: center;
+}
+
+.content ol li{
+  margin-bottom: 3% ;
+  }
+  .content ul li{
+    margin-left: 10px;
+    margin-bottom: 2%;
   }
 
+  .metainfo {
+    display: inline-flex;
+    padding-top: 2%;
+  }
+  .hr-mobile{
+    display: block;
+    margin: 0 15% 7%;
+  }
   .compartir {
     display: none;
   }
@@ -355,24 +446,24 @@ ul {
     display: flex;
   } */
 
-  .addthis_inline_share_toolbox {
+  /* .addthis_inline_share_toolbox {
     margin: auto;
     padding-top: 4%;
     display: flex; 
-  }
+  } */
 
-  .metainfo-hr {
+  .metainfo hr {
     display: none;
   }
 
   .publicado {
     margin-right: auto;
-    margin-left: 10%;
+    margin-left: 15%;
   }
 
   .escritor {
     margin-left: auto;
-    margin-right: 10%;
+    margin-right: 15%;
   }
 
   /* footer */

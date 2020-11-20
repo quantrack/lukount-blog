@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const Post = require("../models/post"); 
-
 // ------MULTER PARAMETERS FOR IMAGE UPLOAD------
 const multer  = require('multer')
 const path = require ('path');
@@ -47,5 +46,6 @@ router
     })
 
 });
+
 
 module.exports = router;

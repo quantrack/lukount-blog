@@ -1,7 +1,7 @@
 <%- include ("partials/header") -%>
 
 <section id="blogPost">
-    <div class="container-fluid fullpost">
+    <div class="container-fluid postheaderdiv">
 
         <!-- <div class="col-md-2">
            
@@ -9,39 +9,44 @@
 
 
         <h1 class="postheader">Lukount : una empresa creada durante la pandemia.</h1>
-
+    </div>
         <div class="metapic row">
             <div class="col-lg-10">
-                <img src="https://www.susla.edu/assets/susla/images/AccountingImage.png" class="blogPostImage img-fluid"
+                <img src="/uploads/lukout-main-blogpost.jpg" class="blogPostImage img-fluid"
                     alt="post_image">
             </div>
             <div class="metainfo col-lg-2" id="metainfo">
                 <div class="publicado">
-                    <h3 class="metah3">Publicado</h3>
-                    <p class="pgen">05/11/2020</p>
+                    <h3>Publicado</h3>
+                    <p>05/11/2020</p>
                 </div>
-                <hr class="metainfo-hr">
+                <hr>
                 <div class="escritor">
                     <h3 class="metah3">Escritor</h3>
                     <p class="pgen">Arnaud</p>
                 </div>
-                <hr class="metainfo-hr">
+                <hr>
 
                 <div class="compartir">
-                    <h3 class="metah3">Compartir</h3>
+                    <h3>Compartir</h3>
 
                     <div class="compartir-socmed">
-                        <div class="compartir-socmed-icon addthis_inline_share_toolbox"></div>
-                    </div>
+
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <!-- <div class="compartir-socmed-icon addthis_inline_share_toolbox"> -->
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000%2Fblogpostmain&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="socmed fab fa-facebook-f"></i></a>
+                            <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&source=http%3A%2F%2Flocalhost%3A3000%2Fblogpostmain"><i class="socmed fab fa-linkedin-in"></i>
+                            <a href="http://twitter.com/home?status=Currentlyreading <?php the_permalink(); ?>" title="Click to share this post on Twitter""><i class="socmed fab fa-twitter"></i></a>
+                        </div>
                 </div>
             </div>
+            <hr class="hr-mobile">
 
 
 
 
         </div>
-        <div class="content">
-            <p class="postContentp">
+        <div class="content container-fluid">
                 <h3>Emprendimiento en tiempos de pandemia:
                         soluci&oacute;n contable innovadora se crea en Medell&iacute;n para ayudar a las Pymes a
                         sobrevivir la crisis financiera.</h3>
@@ -79,21 +84,34 @@
                 <img src="images/logo.svg" alt="logo" style="text-align: center; max-width: 50%; height:auto">
 
 
-            </p>
         </div>
+
         <div class="compartir-mobile">
             <h3 class="metah3">Compartir</h3>
 
-            <div class="compartir-socmed">
-                <div class="compartir-socmed-icon addthis_inline_share_toolbox"></div>
+            <div class="compartir-socmed justify-content-center">
 
-            </div>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <!-- <div class="compartir-socmed-icon addthis_inline_share_toolbox"> -->
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000%2Fblogpostmain&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="socmed fab fa-facebook-f"></i></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&source=http%3A%2F%2Flocalhost%3A3000%2Fblogpostmain"><i class="socmed fab fa-linkedin-in"></i>
+                    <a href="http://twitter.com/home?status=Currentlyreading <?php the_permalink(); ?>" title="Click to share this post on Twitter""><i class="socmed fab fa-twitter"></i></a>
+                </div>
         </div>
-    </div>
+    
 </section>
 
 
 </div>
 </section>
 
+<script>
+
+    document.querySelectorAll('.content a')
+      .forEach(function(elem) {
+        elem.setAttribute('target', '_blank');
+        
+      }) 
+    
+    </script>
 <%- include ("partials/footer") -%>
