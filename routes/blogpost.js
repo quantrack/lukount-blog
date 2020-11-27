@@ -2,18 +2,17 @@ const express = require("express");
 const router = express.Router();
 const Post = require("../models/post");
 const moment = require ("moment") ;
-
+const _ = require ("lodash");
 
 router
-.route("/:postId")
+.route("/:postName")
 .get(function(req, res){
 
-  const requestedPostId = req.params.postId;
+  const requestedTitle = req.params.postName;
 
-    Post.findOne({_id: requestedPostId}, function(err, post){
+    Post.findOne({title: requestedTitle}, function(err, post){
 
       res.render("blogpost", {
-        postId: post._id,
         image: post.image,
         title: post.title,
         content: post.content,
