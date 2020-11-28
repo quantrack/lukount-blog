@@ -37,10 +37,6 @@ const User = require("./models/user");
 // ---------------------------------
 
 
-let date = 
-
-
-
   // app
   // .route("/register")
   // .get(function(req,res){
