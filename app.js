@@ -41,29 +41,31 @@ let date =
 
 
 
-  app
-  .route("/register")
-  .get(function(req,res){
-    res.render("register");
-  })
-  .post(function(req,res){
-    bcrypt.hash(req.body.password,saltRounds,  function(err,hash){
-      const newUser = new User({
+  // app
+  // .route("/register")
+  // .get(function(req,res){
+  //   res.render("register");
+  // })
+  // .post(function(req,res){
 
-      name : req.body.name, 
-      email : req.body.username,
-      password: hash
-      });
+  //   bcrypt.hash(req.body.password,saltRounds,  function(err,hash){
+
+  //     const newUser = new User({
+
+  //     name : req.body.name, 
+  //     email : req.body.username,
+  //     password: hash
+  //     });
     
-      newUser.save(function(err){
-        if (!err) {
-          res.render("compose");
-        }else {
-          console.log(err);
-        }
-      });
-    });
-  })
+  //     newUser.save(function(err){
+  //       if (!err) {
+  //         res.render("compose");
+  //       }else {
+  //         console.log(err);
+  //       }
+  //     });
+  //   });
+  // })
 
   
   
