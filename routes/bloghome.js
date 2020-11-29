@@ -8,7 +8,8 @@ router
 .get(function(req,res){
     Post.find({}, function(err, posts){
         res.render("bloghome", {
-          posts: posts
+          posts: posts,
+          title: "Lukount Blogging"
           });
       });
     }); 

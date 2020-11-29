@@ -6,7 +6,7 @@ router
 .route("/")
 .get(function(req, res){
   
-      res.render("blogpostmain");
+      res.render("blogpostmain",{title: "Lukount : una empresa creada durante la pandemia"});
 });
 
 module.exports = router;
