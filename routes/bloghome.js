@@ -9,7 +9,7 @@ router
     Post.find({}, function(err, posts){
         res.render("bloghome", {
           posts: posts,
-          title: "Lukount Blogging"
+          title: "Lukount Blog"
           });
       });
     }); 
