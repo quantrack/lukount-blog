@@ -40,7 +40,7 @@ const User = require("./models/user");
   // app
   // .route("/register")
   // .get(function(req,res){
-  //   res.render("register");
+  //   res.render("register",{title: "Register"});
   // })
   // .post(function(req,res){
 
@@ -68,7 +68,7 @@ const User = require("./models/user");
   app
   .route("/login")
   .get(function(req,res){
-    res.render("login");
+    res.render("login", {title: "Login"});
   })
 
   .post(function(req,res){
@@ -82,7 +82,7 @@ const User = require("./models/user");
         if (foundUser) {
           bcrypt.compare(password, foundUser.password, function(err, result){
     if (result === true) {
-      res.render("compose")
+      res.render("compose", {title: "Compose"})
     }
           })
     

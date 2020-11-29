@@ -22,7 +22,7 @@ const upload = multer({
 
 
 router.get("/", function(req,res){
-  res.redirect("login");
+  res.redirect("login", {title: "Login"});
 })
 
 router
