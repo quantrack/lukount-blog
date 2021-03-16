@@ -1,4 +1,6 @@
 require('dotenv').config()
+
+const sslRedirect = require('heroku-ssl-redirect').default;
 const express = require ("express");
 const app = express();
 const ejs = require ("ejs");
@@ -7,11 +9,14 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
+
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
 app.use(express.static('public/uploads'));
+
+
 
 
 // Routing
@@ -31,7 +36,7 @@ app.use("/blogpostmain", blogpostmain);
 
 // -------------Database----------
 mongoose.connect("mongodb+srv://admin-lukount:Lukount1@cluster0.uuo32.mongodb.net/lukountblogDB", {useNewUrlParser: true,useUnifiedTopology:true});
-const Post = require("./models/post"); 
+const Post = require("./models/post");
 const User = require("./models/user");
 
 // ---------------------------------
@@ -48,11 +53,11 @@ const User = require("./models/user");
 
   //     const newUser = new User({
 
-  //     name : req.body.name, 
+  //     name : req.body.name,
   //     email : req.body.username,
   //     password: hash
   //     });
-    
+
   //     newUser.save(function(err){
   //       if (!err) {
   //         res.render("compose");
@@ -63,8 +68,9 @@ const User = require("./models/user");
   //   });
   // })
 
-  
-  
+  // enable ssl redirect
+  app.use(sslRedirect());
+
   app
   .route("/login")
   .get(function(req,res){
@@ -74,7 +80,7 @@ const User = require("./models/user");
   .post(function(req,res){
     const username = req.body.username;
     const password = req.body.password;
-    
+
     User.findOne({email: username}, function(err,foundUser){
       if (err) {
         console.log(err);
@@ -85,13 +91,13 @@ const User = require("./models/user");
       res.render("compose", {title: "Compose"})
     }
           })
-    
+
         }
       }
     });
-    
+
     });
-    
+
 
 
 
